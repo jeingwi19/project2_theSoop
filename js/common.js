@@ -81,4 +81,13 @@ $(document).ready(function () {
         return false;
       });
     });
+
+    /* var mySwiper1 = new Swiper('#header .swiper-container', {
+      // Optional parameters
+      direction: 'horizontal', //vertical
+      loop: true, //터치할 경우 마지막 슬라이더에서 처음으로 되돌리지 않음
+
+      
+      
+    }) */
   });

@@ -17,8 +17,8 @@
 }
 
 @mixin transform($value...) {
-    -webkit-transform: $vlaue;
-    transform: $vlaue;
+    -webkit-transform: $value;
+    transform: $value;
 }
 
 @mixin border-box{

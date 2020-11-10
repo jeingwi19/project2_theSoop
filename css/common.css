@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @font-face {
   font-family: NtSans;
   font-weight: 400;
@@ -91,19 +92,35 @@ body {
   color: #191919;
   line-height: 22px;
   font-weight: 400;
-  word-break: keep-all; }
+  word-break: keep-all;
+  background: green; }
 
 #wrap {
   overflow: hidden;
   min-width: 320px; }
 
 #header {
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
   position: fixed;
-  top: 72px;
+  top: -72px;
   left: 0;
   width: 100%;
   height: 72px;
   z-index: 1000; }
+  #header.load {
+    top: 0; }
+  #header.bgchange {
+    background: #ffffff;
+    border-bottom: 1px solid #e5e5e5; }
+    #header.bgchange .logo a img:last-child {
+      opacity: 1; }
+    #header.bgchange .btn_menu .line {
+      background: #191919; }
+    #header.bgchange .search img:last-child {
+      opacity: 1; }
 
 .logo {
   top: 20px;
@@ -117,5 +134,207 @@ body {
     left: 0; }
   .logo a img:last-child {
     opacity: 0; }
+
+.search {
+  top: 20px;
+  right: 76px;
+  width: 32px;
+  height: 32px; }
+  .search, .search img {
+    position: absolute; }
+  .search img {
+    top: 0;
+    left: 0; }
+  .search img:last-child {
+    opacity: 0; }
+
+.btn_menu {
+  top: 24px;
+  right: 20px;
+  width: 32px;
+  height: 24px;
+  overflow: hidden;
+  z-index: 1100; }
+  .btn_menu, .btn_menu .line {
+    position: absolute; }
+  .btn_menu .line {
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+    width: 100%;
+    height: 2px;
+    background: #fff;
+    left: 0; }
+  .btn_menu .top {
+    top: 0; }
+  .btn_menu .mid {
+    top: 10px; }
+  .btn_menu .btm {
+    top: 21px; }
+  .btn_menu.active .line {
+    background: #191919; }
+  .btn_menu.active .top {
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    top: 10px; }
+  .btn_menu.active .mid {
+    left: 100%; }
+  .btn_menu.active .btm {
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    top: 10px; }
+
+#gnb {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 100%;
+  right: 0;
+  bottom: 0;
+  background: #fff;
+  color: #191919;
+  overflow-y: auto; }
+  #gnb > ul {
+    padding: 0px 48px 0 40px; }
+  #gnb ul li a {
+    display: block; }
+  #gnb .account {
+    height: 18px;
+    padding: 27px 20px; }
+    #gnb .account > li {
+      float: left;
+      margin-right: 24px; }
+    #gnb .account > li:first-child::after {
+      content: "";
+      position: absolute;
+      top: 32px;
+      left: 68px;
+      width: 1px;
+      height: 14px;
+      background: #595959; }
+  #gnb .gnb_menu > li > a {
+    font-size: 20px;
+    line-height: 28px;
+    font-weight: 700;
+    padding: 16px 0;
+    width: 100%; }
+  #gnb .gnb_menu > li > ul > li {
+    padding: 12px 0 10px;
+    line-height: 18px; }
+  #gnb .gnb_menu > li > ul > li > ul > li {
+    padding: 20px 20px 0;
+    color: #595959; }
+  #gnb .gnb_menu > li {
+    position: relative;
+    /* > a{
+        position: relative;padding: 15px, 40px;
+    }     */ }
+    #gnb .gnb_menu > li:not(.gnb6) > a::before, #gnb .gnb_menu > li:not(.gnb6) > a::after {
+      -webkit-transition: transform 0.5s;
+      -moz-transition: transform 0.5s;
+      -o-transition: transform 0.5s;
+      transition: transform 0.5s;
+      content: "";
+      position: absolute;
+      top: 16px;
+      right: 0px;
+      width: 28px;
+      height: 28px;
+      background: url("../images/main/icon_more_1x.png"); }
+    #gnb .gnb_menu > li > a::after {
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg); }
+    #gnb .gnb_menu > li.on > a::after {
+      -webkit-transition: rotate(180deg);
+      -moz-transition: rotate(180deg);
+      -o-transition: rotate(180deg);
+      transition: rotate(180deg); }
+  #gnb .quick_link a {
+    display: block;
+    color: #595959; }
+  #gnb .quick_link li {
+    width: 100%;
+    padding: 20px 40px;
+    position: relative; }
+  #gnb .quick_link li:first-child {
+    margin-top: 20px; }
+  #gnb .quick_link li:first-child::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 16px;
+    width: 28px;
+    height: 28px;
+    background: url("../images/common/icon_inquiry_1x.png"); }
+  #gnb .quick_link li:last-child::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 16px;
+    width: 28px;
+    height: 28px;
+    background: url("../images/common/icon_location_1x.png"); }
+  #gnb .line_banner {
+    position: relative;
+    background: no-repeat center;
+    /* height: 120px; */
+    line-height: 140px;
+    margin-top: 20px;
+    background: pink;
+    -webkit-background-size: cover;
+    background-size: cover; }
+    #gnb .line_banner.movie1 {
+      background-image: url("../images/common/banner_movie1_3x.jpg"); }
+    #gnb .line_banner.movie2 {
+      background-image: url("../images/common/banner_movie2_3x.jpg"); }
+    #gnb .line_banner.movie3 {
+      background-image: url("../images/common/banner_movie3_3x.jpg"); }
+    #gnb .line_banner::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      right: 0;
+      top: 0;
+      height: 100%; }
+  #gnb .gnb_btnbtm {
+    padding: 20px 20px;
+    line-height: 28px;
+    vertical-align: middle;
+    height: 28px; }
+    #gnb .gnb_btnbtm .logo_gray {
+      float: left; }
+    #gnb .gnb_btnbtm .btn_sns {
+      float: right;
+      margin-left: 12px; }
+
+/* gnb슬라이더 */
+/* footer */
+#footer {
+  background: #fff;
+  color: #949494;
+  display: table;
+  padding-bottom: 40px; }
+  #footer .ft_logo {
+    height: 28px;
+    padding: 28px 32px; }
+    #footer .ft_logo a {
+      display: table-cell;
+      vertical-align: middle;
+      padding-right: 20px; }
+  #footer .ft_info {
+    font-size: 12px;
+    padding: 0 20px; }
+    #footer .ft_info span {
+      margin-right: 24px;
+      position: relative; }
+    #footer .ft_info :first-child::after, #footer .ft_info :nth-child(3)::after {
+      content: "";
+      position: absolute;
+      right: -16px;
+      top: 4px;
+      width: 1px;
+      height: 10px;
+      background: #949494; }
 
 /*# sourceMappingURL=common.css.map */
