@@ -6,6 +6,7 @@
     <title> 더숲 </title>
     <link rel="apple-touch-icon" href="images/common/symbol_ios.png">
     <link rel="shortcut icon" href="images/common/symbol_android.png">
+    <link rel="stylesheet" href="css/swiper-bundle.css">
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/main.css">
     <script src="js/jquery-1.12.4.min.js"></script>
@@ -34,6 +35,7 @@
             </button>
 
             <!-- 오른쪽 네비게이션 메뉴 -->
+            <!-- https://shubamba.tistory.com/52 -->
             <nav id="gnb">
                 <ul class="account">
                     <li><a href="">Login</a></li>
@@ -116,7 +118,7 @@
                     <li><a href="">오시는 길</a></li>
                 </ul>
                 <article class="line_banner">
-                    <div class="swiper-container">
+                    <div class="swiper-container type1" id="slide1">
                         <div class="swiper-wrapper">
                             <div class="swiper-slide movie1">
                                 <a href="">
@@ -168,15 +170,15 @@
                     <div class="swiper-wrapper">
                         <div class="swiper-slide slide1">
                             <div class="slide_wrap">
-                                <!-- <img src="images/main/slider1_1x.jpg" alt="" srcset="images/main/slider1_2x.jpg 2x, images/main/slider1_3x.jpg 3x"> -->
+                                <img src="images/main/slider1_1x.jpg" alt="" srcset="images/main/slider1_2x.jpg 2x, images/main/slider1_3x.jpg 3x">
                             </div>
                             <div class="txtwrap">
-                                <h4>커피가 그윽한 서점 더숲</h4>
+                                <h4>안녕하세요 <br>커피가 그윽한 서점 더숲</h4>
                             </div>
                         </div>
                         <div class="swiper-slide slide2">
                             <div class="slide_wrap">
-                                <!-- <img src="images/main/slider2_1x.jpg" alt="" srcset="images/main/slider2_2x.jpg 2x, images/main/slider2_3x.jpg 3x"> -->
+                                <img src="images/main/slider2_1x.jpg" alt="" srcset="images/main/slider2_2x.jpg 2x, images/main/slider2_3x.jpg 3x">
                             </div>
                             <div class="txtwrap">
                                 <h4>더숲 방문 이용 시 <br>마스크를 착용해주세요</h4>
@@ -185,10 +187,17 @@
                         </div>
                     </div>
                 </div>
-                    <div class="controller p_a">
+                    <div class="controller">
                         <!-- 페이지네이션 -->
                         <div class="swiper-pagination"></div>
-                        
+
+                        <!-- play, stop 버튼 -->
+                        <button class="autoplay play_stop" type="button">
+                            <span class="blind-b">재생</span>
+                        </button>
+                        <button class="autostop play_stop"  type="button">
+                            <span class="blind-b">일시정지</span>
+                        </button>
                     </div>
 
                 </div>
@@ -296,17 +305,17 @@
                     <div class="swiper-wrapper">
                         <div class="swiper-slide book1">
                             <a href="">
-                                <img src="images/common/banner_book1_1x.jpg" alt="더숲 오늘의 책. 나는 차별하지 않아. 정말그럴까? 선량한 차별주의자" srcset="images/common/banner_book1_2x.jpg 2x, images/common/banner_book1_3x.jpg 3x">
+                                <!-- <img src="images/common/banner_book1_1x.jpg" alt="더숲 오늘의 책. 나는 차별하지 않아. 정말그럴까? 선량한 차별주의자" srcset="images/common/banner_book1_2x.jpg 2x, images/common/banner_book1_3x.jpg 3x"> -->
                             </a>
                         </div>
                         <div class="swiper-slide book2">
                             <a href="">
-                                <img src="images/common/banner_book2_1x.jpg" alt="더숲 오늘의 책. 한편의 소설같은 우리의 인생 작은아씨들 오리지널 커버" srcset="images/common/banner_book2_2x.jpg 2x, images/common/banner_book2_3x.jpg 3x">
+                                <!-- <img src="images/common/banner_book2_1x.jpg" alt="더숲 오늘의 책. 한편의 소설같은 우리의 인생 작은아씨들 오리지널 커버" srcset="images/common/banner_book2_2x.jpg 2x, images/common/banner_book2_3x.jpg 3x"> -->
                             </a>
                         </div>
                         <div class="swiper-slide book3">
                             <a href="">
-                                <img src="images/common/banner_book3_1x.jpg" alt="더숲 오늘의 책. 매일 설레는 클래식의 말 1일 1클래식 1기쁨" srcset="images/common/banner_book3_2x.jpg 2x, images/common/banner_book3_3x.jpg 3x">
+                                <!-- <img src="images/common/banner_book3_1x.jpg" alt="더숲 오늘의 책. 매일 설레는 클래식의 말 1일 1클래식 1기쁨" srcset="images/common/banner_book3_2x.jpg 2x, images/common/banner_book3_3x.jpg 3x"> -->
                             </a>
                         </div>
                     </div>
@@ -327,15 +336,15 @@
                                     <img src="images/main/club3_1x.jpg" alt="" srcset="images/main/club3_2x.jpg 2x, images/main/club3_3x.jpg 3x">
                                 </a>
                             </div>
-                            <div class="txt_club">
+                            <div class="txt_club font12">
                                 <p>예술클럽</p>
                                 <strong class="font16">파리, 벨 에포크 예술여행</strong>
                                 <p>김지영 예술학 강사</p>
-                                <div class="txt_tag font12">
-                                    <span>#더숲</span>
-                                    <span>#예술클럽</span>
-                                    <span>#김지영 강사</span>
-                                    <span>#인상주의</span>
+                                <div class="txt_tag">
+                                    <a href="" target="_blank"><span>#더숲</span></a>
+                                    <a href="" target="_blank"><span>#예술클럽</span></a>
+                                    <a href="" target="_blank"><span>#김지영 강사</span></a>
+                                    <a href="" target="_blank"><span>#인상주의</span></a>
                                 </div>
                             </div>
                         </div>
@@ -345,15 +354,15 @@
                                     <img src="images/main/club1_1x.jpg" alt="" srcset="images/main/club1_2x.jpg 2x, images/main/club1_3x.jpg 3x">
                                 </a>
                             </div>
-                            <div class="txt_club">
+                            <div class="txt_club font12">
                                 <p>와인클럽</p>
                                 <strong class="font16">와인모어 ep8. <br>Profondo Rosso</strong>
                                 <p>소믈리에 모린 야포</p>
-                                <div class="txt_tag font12">
-                                    <span>#더숲</span>
-                                    <span>#와인클럽</span>
-                                    <span>#소믈리에</span>
-                                    <span>#Maureen YAPO</span>
+                                <div class="txt_tag">
+                                    <a href="" target="_blank"><span>#더숲</span></a>
+                                    <a href="" target="_blank"><span>#와인클럽</span></a>
+                                    <a href="" target="_blank"><span>#소믈리에</span></a>
+                                    <a href="" target="_blank"><span>#Maureen YAPO</span></a>
                                 </div>
                             </div>
                         </div>
@@ -363,16 +372,16 @@
                                     <img src="images/main/club2_1x.jpg" alt="" srcset="images/main/club2_2x.jpg 2x, images/main/club2_3x.jpg 3x">
                                 </a>
                             </div>
-                            <div class="txt_club">
+                            <div class="txt_club font12">
                                 <p>시사영어클럽</p>
                                 <strong class="font16">시사영어를 통해 본 오늘의 <br>국제 이슈 11/19 시작</strong>
                                 <p>English 저자 고창록</p>
-                                <div class="txt_tag font12">
-                                    <span>#더숲</span>
-                                    <span>#시사영어</span>
-                                    <span>#국제</span>
-                                    <span>#이슈</span>
-                                    <span>#고창록</span>
+                                <div class="txt_tag">
+                                    <a href="" target="_blank"><span>#더숲</span></a>
+                                    <a href="" target="_blank"><span>#시사영어</span></a>
+                                    <a href="" target="_blank"><span>#국제</span></a>
+                                    <a href="" target="_blank"><span>#이슈</span></a>
+                                    <a href="" target="_blank"><span>#고창록</span></a>
                                 </div>
                             </div>
                         </div>
@@ -390,28 +399,30 @@
                         <img src="images/main/icon_more_1x.png" alt="" srcset=" images/main/icon_more_2x.png 2x, images/main/icon_more_3x.png 3x">
                     </a>
                 </button>
-                <div class="reading1">
-                    <div class="img_box radi8">
-                        <a href="">
-                            <img src="images/main/reading1_1x.jpg" alt="" srcset="images/main/reading1_2x.jpg 2x, images/main/reading1_3x.jpg 3x">
-                        </a>
-                    </div>
-                    <div class="tit_warp">
-                        <strong class="font16">작은 서점과 함께<br>하는 낭독회: ...</strong>
-                        <p class="font12 ft_gray">2020.11.02</p>
-                    </div>
-                </div>
-                <div class="reading2">
-                    <div class="img_box radi8">
-                        <a href="">
-                            <img src="images/main/reading2_1x.jpg" alt="" srcset="images/main/reading2_2x.jpg 2x, images/main/reading2_3x.jpg 3x">
-                        </a>
-                    </div>
-                    <div class="tit_warp">
-                        <strong class="font16">더숲 낭독회: 시인<br>유병록</strong>
-                        <p class="font12 ft_gray">2020.11.10</p>
-                    </div>
-                </div>
+                <ul class="list_read">
+                    <li class="reading1">
+                        <div class="img_box radi8">
+                            <a href="">
+                                <img src="images/main/reading1_1x.jpg" alt="" srcset="images/main/reading1_2x.jpg 2x, images/main/reading1_3x.jpg 3x">
+                            </a>
+                        </div>
+                        <div class="tit_warp">
+                            <strong class="font16">작은 서점과 함께<br>하는 낭독회: ...</strong>
+                            <p class="font12 ft_gray">2020.11.02</p>
+                        </div>
+                    </li>
+                    <li class="reading2">
+                        <div class="img_box radi8">
+                            <a href="">
+                                <img src="images/main/reading2_1x.jpg" alt="" srcset="images/main/reading2_2x.jpg 2x, images/main/reading2_3x.jpg 3x">
+                            </a>
+                        </div>
+                        <div class="tit_warp">
+                            <strong class="font16">더숲 낭독회: 시인<br>유병록</strong>
+                            <p class="font12 ft_gray">2020.11.10</p>
+                        </div>
+                    </li>
+                </ul>
             </article>
 
             <!-- 슬라이드 띠배너 -->
@@ -449,36 +460,54 @@
                         <img src="images/main/icon_more_1x.png" alt="" srcset=" images/main/icon_more_2x.png 2x, images/main/icon_more_3x.png 3x">
                     </a>
                 </button>
-                <ul class="list">
-                    <li>
-                        <a href="">
-                            <img src="images/main/event1_1x.jpg" alt="노닥노닥 살롱 노원문화재단 서울문화재단" srcset="images/main/event1_2x.jpg 2x, images/main/event1_3x.jpg 3x">
-                        </a>
-                        <strong class="font16">토요 영화 살롱</strong>
-                        <div class="font12 ft_gray">
-                            <span>2020.10.24</span>
-                            <span>2020.12.12</span>
-                        </div>
+                <ul class="list_event">
+                    <li class="mgb16">
+                        <ul>
+                            <li class="img_event">
+                                <a href="">
+                                    <img src="images/main/event1_1x.jpg" alt="노닥노닥 살롱 노원문화재단 서울문화재단" srcset="images/main/event1_2x.jpg 2x, images/main/event1_3x.jpg 3x">
+                                </a>
+                            </li>
+                            <li class="txt_event">
+                                <strong class="font16">토요 영화 살롱</strong>
+                                <div class="font12 ft_gray">
+                                    <span>2020.10.24</span>
+                                    <span>2020.12.12</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="mgb16">
+                        <ul>
+                            <li class="img_event">
+                                <a href="">
+                                    <img src="images/main/event2_1x.jpg" alt="노닥노닥 살롱" srcset="images/main/event2_2x.jpg 2x, images/main/event2_3x.jpg 3x">
+                                </a>
+                            </li>
+                            <li class="txt_event">
+                                <strong class="font16">배달의 민족 라이더스 <br>더빵 배달 개시</strong>
+                                <div class="font12 ft_gray">
+                                    <span>2020.09.21</span>
+                                    <span>2020.12.31</span>
+                                </div>
+                            </li>
+                        </ul>
                     </li>
                     <li>
-                        <a href="">
-                            <img src="images/main/event2_1x.jpg" alt="노닥노닥 살롱" srcset="images/main/event2_2x.jpg 2x, images/main/event2_3x.jpg 3x">
-                        </a>
-                        <strong class="font16">배달의 민족 라이더스 <br>더빵 배달 개시</strong>
-                        <div class="font12 ft_gray">
-                            <span>2020.09.21</span>
-                            <span>2020.12.31</span>
-                        </div>
-                    </li>
-                    <li>
-                        <a href="">
-                            <img src="images/main/event3_1x.jpg" alt="노닥노닥 살롱" srcset="images/main/event3_2x.jpg 2x, images/main/event3_3x.jpg 3x">
-                        </a>
-                        <strong class="font16">영화친구 &apos;김시선&apos;과 함께하는 김시선의 ... </strong>
-                        <div class="font12 ft_gray">
-                            <span>2020.08.10</span>
-                            <span>2020.09.20</span>
-                        </div>
+                        <ul>
+                            <li class="img_event">
+                                <a href="">
+                                    <img src="images/main/event3_1x.jpg" alt="노닥노닥 살롱" srcset="images/main/event3_2x.jpg 2x, images/main/event3_3x.jpg 3x">
+                                </a>
+                            </li>
+                            <li class="txt_event">
+                                <strong class="font16">영화친구 &apos;김시선&apos;과<br> 함께하는 김시선의 ... </strong>
+                                <div class="font12 ft_gray">
+                                    <span>2020.08.10</span>
+                                    <span>2020.09.20</span>
+                                </div>
+                            </li>
+                        </ul>
                     </li>
                 </ul>
             </article>
@@ -492,17 +521,17 @@
                         <img src="images/main/icon_more_1x.png" alt="" srcset=" images/main/icon_more_2x.png 2x, images/main/icon_more_3x.png 3x">
                     </a>
                 </button>
-                <ul>
+                <ul class="list_notice">
                     <li>
-                        <a href="">더숲 '올해의 영화' 연말기획전</a>
+                        <a href="http://www.forest6.co.kr/home/board_EGhp84/23115">더숲 '올해의 영화' 연말기획전</a>
                         <span class="font12">2020.11.01</span>
                     </li>
                     <li>
-                        <a href="">칸영화제 공식 굿즈 경품이벤트…</a>
+                        <a href="http://www.forest6.co.kr/home/board_EGhp84/16352">칸영화제 공식 굿즈 경품이벤트! &lt;기생충&gt; 온라인예매 이벤트!</a>
                         <span class="font12">2020.10.24</span>
                     </li>
                     <li>
-                        <a href="">봉준호 감독 주요 작품 특별상영…</a>
+                        <a href="http://www.forest6.co.kr/home/board_EGhp84/16340">봉준호 감독 주요 작품 특별상영 &lt; 살인의 추억&gt;, &lt;마더&gt;, &lt;설국열차&gt;</a>
                         <span class="font12">2020.10.08</span>
                     </li>
                 </ul>
@@ -511,10 +540,10 @@
             <!-- 하단메뉴바 -->
             <article class="btm_quick mt_80">
                 <h3 class="blind-b">빠른 찾기 메뉴</h3>
-                <div>
+                <div class="txt_link">
                     <ul>
-                        <li><a href="">문의사항</a></li>
-                        <li><a href="">오시는 길</a></li>
+                        <li><a href="http://www.forest6.co.kr/home/board_bpJr09">문의사항</a></li>
+                        <li><a href="http://www.forest6.co.kr/home/page_UmSb01">오시는 길</a></li>
                         <li><a href="">PC 버전</a></li>
                     </ul>
                 </div>

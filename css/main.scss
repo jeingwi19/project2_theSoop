@@ -15,20 +15,58 @@
 
 /* 메인슬라이더 */
 .top_visual{
-    min-height: 400px;
-    &::before{
+    max-height: 400px;min-width: 360px;
+    /* &::before{
         background-image: url("../images/main/slider1_1x.jpg");
+    } */
+    .slide_wrap{
+        img{display: block;width: 100%;}
     }
-    .swiper-slide .txtwrap > h4{font-size: 24px;line-height: 40px;letter-spacing: -25px;}
-    .swiper-slide .txtwrap > p{margin-top: 16px;}
+    .swiper-slide .slide_wrap{width: 100%;}
+    .swiper-slide .txtwrap{
+        @include transform(translateY(-100%));
+        margin-left: 20px;position: absolute;left: 0;top: 50%;
+    }
+
+    .swiper-slide .txtwrap > h4{font-size: 24px;line-height: 40px;height: 72px;}
+    .swiper-slide .txtwrap > p{margin-top: 20px;}
     .slide1 .txtwrap{
         font-family: RIDIBatang;
+    }
+
+    .controller{
+        position: absolute;bottom: 0;left: 0;z-index: 100;
+        .swiper-pagination-fraction{
+            color: #fff;
+            position: relative;top: 0;left: 20px;
+
+            .swiper-pagination-current{
+                @include transform(translateY(-50%));
+                &::after{content: "";position: absolute;top: 50%;left: 24px;width: 60px;height: 2px;background: #ccc;}
+            }
+
+            .swiper-pagination-total{
+                padding-left: 80px;
+            }
+
+            /* 왜안보여ㅕㅕㅠㅠ 일시정지버튼 */
+            .play_stop{
+                width: 28px;height: 28px;
+            }
+            .autoplay{background: url("../images/main/icon_pause_1x.png");display: none;}
+            .autostop{
+                background: url("../images/main/icon_pause_1x.png");
+            }
+            button{position: absolute;left: 0;}
+
+            
+        }
     }
 }
 
 /* 상단메뉴 */
 .quick_top{
-    background: yellow;height: 138px;
+    background: yellowgreen;height: 138px;
     a, img, span{display: block;text-align: center;}
     span{line-height: 16px;font-weight: 500;}
     ul li{float: left;margin-top: 20px;}
@@ -42,29 +80,36 @@ h3{display: inline-block;font-size: 20px;line-height: 28px;margin-bottom: 20px;}
 .font16{display: inline-block;font-size: 16px;line-height: 22px;margin-top: 16px;}
 .font12{font-size: 12px;line-height: 16px;}
 .ft_gray{display: block;color: #949494;margin-top: 10px;}
-
+.radi8{
+    @include radius(8px);
+    overflow: hidden;
+}
+.mgb16{margin-bottom: 16px;}
 
 
 .cnt1{
-    
     .swiper-container{
-        
-        .swiper-slide{
-            width: 80%;position: relative;
-            .img_box{
-                position: relative;
-                @include radius(8px);
-                overflow: hidden;
-                width: 240px;
-                .tit_warp{
-                    @include transform(translate(-50%));
-                    position: absolute;left: 50%;top: 0;width: 208px;height: 28px;line-height: 28px;margin-top: 16px;
-                }                
-            }
-            .txt_box{
-                .ft_gray p:last-child{margin-top: 16px;}
+        /* overflow: visible; */
+        padding: 0;
+        .swiper-wrapper{
+            .swiper-slide{
+                width: 80%;position: relative;
+                .img_box{
+                    position: relative;
+                    @include radius(8px);
+                    overflow: hidden;
+                    max-width: 240px;
+                    .tit_warp{
+                        @include transform(translate(-50%));
+                        position: absolute;left: 50%;top: 0;width: 208px;height: 28px;line-height: 28px;margin-top: 16px;
+                    }                
+                }
+                .txt_box{
+                    .ft_gray p:last-child{margin-top: 16px;}
+                }
             }
         }
+        
     }
 
     .tit_warp{
@@ -94,5 +139,84 @@ h3{display: inline-block;font-size: 20px;line-height: 28px;margin-bottom: 20px;}
 
 .cnt2{
     > h3{display: block;text-align: center;}
+    .swiper-slide{
+        position: relative;
+        .img_box{max-width: 240px;}
+        .txt_club{
+            padding: 0 0 0 16px; position: absolute;color: #fff;bottom: 24px;max-width: 224px;
+            strong, a, span{display: inline-block}
+            strong{width: 200px;height: 40px;margin-bottom: 10px;}
+            strong + p{margin-bottom: 20px;}
+            .txt_tag{
+                a{
+                    margin-bottom: 6px;margin-right: 4px;
+                    span{padding: 4px 14px;border: 1px solid #e5e5e5;border-radius: 20px;}
+                }
+                
+            }
+
+        }
+    }
     
+}
+
+.cnt3{
+    .list_read{
+        height: 260px;
+        li{float: left;margin-bottom: 60px;}
+        li:first-child{margin-right: 16px;}
+    }
+}
+
+.cnt4{
+    a, strong, span{display: inline-block;}
+
+    .list_event{
+        li ul{
+            height: 110px;
+            li{float: left;}
+        }
+    }
+    .img_event{
+        @include radius(8px 0 0 8px);
+        overflow: hidden;max-width: 110px;
+        /* & a{display: inline;} */
+    }
+    .txt_event{
+        @include radius(0 8px 8px 0);
+        /* min-width: 100%; *//* margin-left: 16px; width: 180px;*/
+        min-width: 210px;height: 110px;background: #f6f6f6;
+        strong, span{padding-left: 16px;}
+        .font16{
+            width: 180px;height: 48px;
+        }
+        .font12{
+            position: relative;
+            span:first-child::after{
+                @include transform(translate (-50%));
+                content: "";position: absolute;top: 50%;left: 80px;width: 12px;height: 1px;background: #949494;
+            }
+        }
+    }
+}
+
+.cnt5{
+    a, span{display: inline-block;}
+    .list_notice{
+        li{
+            /* height: 40px; */background: #fff;padding: 8px;
+            a{width: 228px;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;}
+            span{float: right;}
+        }
+        li:first-child, li:nth-child(2){border-bottom: 1px solid #eeeeee;}
+    }
+}
+
+.btm_quick{
+    ul, li, a{display: inline-block;}
+    ul{
+        text-align: center;background: #eeeeee;width: 100%;padding: 10px 0;
+        li:first-child, li:nth-child(2){margin-right: 52px;}
+    }
+    .txt_link{text-align: center;}
 }

@@ -5,15 +5,21 @@ $(document).ready(function () {
         loop: true, //터치할 경우 마지막 슬라이더에서 처음으로 되돌리지 않음
 
         // 이전, 다음 버튼
-        navigation: {
+        /* navigation: {
             nextEl: '.swiper-button-next',
             prevEl: '.swiper-button-prev',
-        },
+        }, */
 
         //자동실행
         autoplay: {
             delay: 10000, //1초 = 1000
             disableOnInteraction: false, //swiper이후에도 자동실행 동작
+        },
+
+        //페이지네이션
+        pagination: {
+            el: '.swiper-pagination',
+            type: 'fraction',
         },
     })
     //본문1 자동 실행과 일시정지 추가

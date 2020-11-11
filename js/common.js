@@ -82,12 +82,33 @@ $(document).ready(function () {
       });
     });
 
-    /* var mySwiper1 = new Swiper('#header .swiper-container', {
-      // Optional parameters
-      direction: 'horizontal', //vertical
-      loop: true, //터치할 경우 마지막 슬라이더에서 처음으로 되돌리지 않음
 
-      
-      
-    }) */
+    /* 얇은 배너 슬라이더 */
+    $('.swiper-container.type1').each(function (idx) {
+      var swiperName = 'type1Swiper'+idx;
+      swiperName = new Swiper($(this), {
+        loop: false,
+        pagination: {
+          el: '.swiper-pagination',
+          type: 'fraction',
+        },
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+      });
+    });
+
+    $('.swiper-container.type2').each(function (idx) {
+      var swiperName = 'type2Swiper'+idx;
+      swiperName = new Swiper($(this), {
+        loop: true,
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+      });
+    });
+
+    
   });
