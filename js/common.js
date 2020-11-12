@@ -87,28 +87,15 @@ $(document).ready(function () {
     $('.swiper-container.type1').each(function (idx) {
       var swiperName = 'type1Swiper'+idx;
       swiperName = new Swiper($(this), {
-        loop: false,
+        /* loop: true, */
         pagination: {
           el: '.swiper-pagination',
-          type: 'fraction',
         },
-        navigation: {
+        /* navigation: {
           nextEl: '.swiper-button-next',
           prevEl: '.swiper-button-prev',
-        },
+        }, */
       });
     });
-
-    $('.swiper-container.type2').each(function (idx) {
-      var swiperName = 'type2Swiper'+idx;
-      swiperName = new Swiper($(this), {
-        loop: true,
-        navigation: {
-          nextEl: '.swiper-button-next',
-          prevEl: '.swiper-button-prev',
-        },
-      });
-    });
-
     
   });
