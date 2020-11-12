@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> 더숲 </title>
+    <link rel="apple-touch-icon" href="../images/common/symbol_ios.png">
+    <link rel="shortcut icon" href="../images/common/symbol_android.png">
+    <link rel="stylesheet" href="../css/swiper-bundle.css">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/books.css">
+    <script src="../js/jquery-1.12.4.min.js"></script>
+    <script src="../js/swiper.min.js"></script>
+    <script src="../js/common.js"></script>
+    <script src="../js/sub.js"></script>
+</head>
+
+<body>
+    <div id="wrap">
+        <header id="header">
+            <h1 class="logo">
+                <a href="../index.html" aria-label="더숲">
+                    <img src="../images/common/logo_1x.png" alt=""
+                        srcset="../images/common/logo_2x.png 2x, ../images/common/logo_3x.png 3x">
+                    <img src="../images/common/logo_1x.png" alt=""
+                        srcset="../images/common/logo_2x.png 2x, ../images/common/logo_3x.png 3x">
+                </a>
+            </h1>
+            <button type="button" class="search">
+                <img src="../images/common/icon_searchwhite_1x.png" alt="검색하기"
+                    srcset="../images/common/icon_searchwhite_2x.png 2x, ../images/common/icon_searchwhite_3x.png 3x">
+                <img src="../images/common/icon_searchBlack_1x.png" alt="검색하기"
+                    srcset="../images/common/icon_searchBlack_2x.png 2x, ../images/common/icon_searchBlack_3x.png 3x">
+            </button>
+            <button class="btn_menu" type="button">
+                <span class="blind-b">메뉴 열기</span>
+                <span class="line top"></span>
+                <span class="line mid"></span>
+                <span class="line btm"></span>
+            </button>
+
+            <!-- 오른쪽 네비게이션 메뉴 -->
+            <!-- https://shubamba.tistory.com/52 -->
+            <nav id="gnb">
+                <ul class="account">
+                    <li><a href="">Login</a></li>
+                    <li><a href="">Join</a></li>
+                </ul>
+                <ul class="gnb_menu">
+                    <li class="gnb1">
+                        <a href="" data-link="first">Home &amp;</a>
+                        <ul>
+                            <li><a href="">더숲 아카데미</a></li>
+                            <li><a href="">더숲클럽</a></li>
+                            <li><a href="">더숲 낭독회</a></li>
+                            <li><a href="">더숲 이벤트</a></li>
+                            <li><a href="">공지사항</a></li>
+                            <li><a href="">묻고답하기</a></li>
+                            <li>
+                                <a href="">더숲 소개</a>
+                                <ul>
+                                    <li><a href="">오시는 길</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="">더숲 앨범</a></li>
+                        </ul>
+                    </li>
+                    <li class="gnb2">
+                        <a href="">Art Cinema</a>
+                        <ul>
+                            <li><a href="">상영영화</a></li>
+                            <li><a href="">예매안내</a></li>
+                            <li><a href="">영화예매</a></li>
+                            <li><a href="">예매확인/취소</a></li>
+                            <li><a href="">기획&amp;이벤트</a></li>
+                            <li><a href="">관람안내</a></li>
+                        </ul>
+                    </li>
+                    <!-- li.gnb>a>ul>li>a -->
+                    <li class="gnb3">
+                        <a href="">Gallery</a>
+                        <ul>
+                            <li><a href="">전시정보</a></li>
+                            <li><a href="">갤러리 대관안내</a></li>
+                        </ul>
+                    </li>
+                    <li class="gnb4">
+                        <a href="">Concert</a>
+                        <ul>
+                            <li><a href="">더숲연주회</a></li>
+                            <li><a href="">콘서트홀 안내</a></li>
+                        </ul>
+                    </li>
+                    <li class="gnb5">
+                        <a href="books.html">Books</a>
+                        <ul>
+                            <li><a href="books.html">서가 이용안내</a></li>
+                            <li><a href="">이벤트</a></li>
+                            <li>
+                                <a href="">해외레지던스 프로그램</a>
+                                <ul>
+                                    <li><a href="">해외레지던스 신청</a></li>
+                                    <li><a href="">해외레지던스 선정자 발표</a></li>
+                                    <li><a href="">레지던스에세이</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="gnb6">
+                        <a href="">Bakery &amp; Cafe</a>
+                    </li>
+                    <li class="gnb7">
+                        <a href="">Seminar Room</a>
+                        <ul>
+                            <li><a href="">더숲 세미나룸</a></li>
+                            <li><a href="">세미나룸 이용안내</a></li>
+                            <li><a href="">세미나룸 예약</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul class="quick_link">
+                    <li><a href="">문의사항</a></li>
+                    <li><a href="">오시는 길</a></li>
+                </ul>
+                <article class="line_banner">
+                    <div class="swiper-container type1" id="slide1">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide banner1">
+                                <p class="blind-b">톰보이 워터 릴리스 셀린 시아마 감독 걸후드</p>
+                            </div>
+                            <div class="swiper-slide banner2">
+                                <p class="blind-b">봉준호 감독이 사랑한 이탈리아 영화 행복한 라짜로</p>
+                            </div>
+                            <div class="swiper-slide banner3">
+                                <p class="blind-b">제24회 부산국제영화제 관객상 수상 페뷸러스</p>
+                            </div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+
+                </article>
+                <div class="gnb_btnbtm">
+                    <button type="button" value="더숲 홈으로" class="logo_gray">
+                        <a href="../index.html">
+                            <img src="../images/common/logo_gray1_1x.png" alt="더숲 로고"
+                                srcset="../images/common/logo_gray1_2x.png 2x, ../images/common/logo_gray1_3x.png 3x">
+                        </a>
+                    </button>
+                    <button type="button" value="페이스북 새창 이동" class="btn_sns" target="_blank">
+                        <a href="https://www.facebook.com/withgrove/">
+                            <img src="../images/common/sns_facebook_1x.png" alt="페이스북 아이콘"
+                                srcset="../images/common/sns_facebook_2x.png 2x, ../images/common/sns_facebook_3x.png 3x">
+                        </a>
+                    </button>
+                    <button type="button" value="인스타 새창 이동" class="btn_sns" target="_blank">
+                        <a href="https://www.instagram.com/theforest6/">
+                            <img src="../images/common/sns_insta_1x.png" alt="인스타 아이콘"
+                                srcset="../images/common/sns_insta_2x.png 2x, ../images/common/sns_insta_3x.png 3x">
+                        </a>
+                    </button>
+                </div>
+            </nav>
+        </header>
+
+    </div>
+
+    <div id="sub5Cnt" role="main" class="cnt_sub">
+        <article class="sub_tit">
+            <img src="../images/books/subTit_books_1x.jpg" alt="" srcset="../images/books/subTit_books_2x.jpg 2x, ../images/books/subTit_books_3x.jpg 3x">
+            <div class="tit_txt">
+                <h3>Books</h3>
+                <p>다양한 분야의 한정된 책들이 가득한 <br>특별한 서점 더숲</p>
+            </div>
+        </article>
+        <article class="sub_cnt1 inner">
+            <h4>서가 이용안내</h4>
+            <div class="sub_txtBox tBox1">
+                <h5>1</h5>
+                <span class="blind-b">첫번째</span>
+                <p>"293호 열차 C칸"은 더숲의 큐레이션 서가를 이르는 별칭으로 에드워드 호퍼의 그림 제목입니다. 더숲을 찾으시는 많은 분들이 함께 사용하는 공간이니 작은 배려와 협조 부탁드립니다.</p>
+            </div>
+
+            <figure class="fig_box fig_img1">
+                <img src="../images/books/content_img1x1.jpg" alt="열차 안에서 책을 읽고 있는 모자 쓴 여자" srcset="../images/books/content_img1x2.jpg 2x, ../images/books/content_img1x3.jpg 3x">
+                <figcaption class="blind-b">에드워드 호퍼의 그림 제목 239호 열차 C칸 </figcaption>
+            </figure>
+
+            <div class="arrow down1">
+                <img src="../images/books/arrow1_1x.png" alt="" srcset="../images/books/arrow1_2x.png 2x, ../images/books/arrow1_3x.png 3x">
+            </div>
+
+            <div class="sub_txtBox tBox2">
+                <h5>2</h5>
+                <span class="blind-b">두번째</span>
+                <p>이곳에 비치된 도서는 모두 판매를 위한 책입니다. 훼손되면 판매가 불가능하오니 보실 때 유념해 주시면 감사하겠습니다.</p>
+            </div>
+
+            <div class="sub_txtBox tBox3">
+                <h5>3</h5>
+                <span class="blind-b">세번째</span>
+                <p>도서는 구입후 홀에서 편하게 읽어주시고, 내용을 살펴보시는 것은 서가쪽에서만 가능합니다. 보신후에는 꼭 원 위치에 놓아주세요.</p>
+            </div>
+
+            <div class="sub_txtBox tBox4">
+                <h5>4</h5>
+                <span class="blind-b">네번째</span>
+                <p>책의 구입은 카페 카운터에서 할 수 있습니다.</p>
+            </div>
+
+            <div class="arrow down2">
+                <img src="../images/books/arrow1_1x.png" alt="" srcset="../images/books/arrow1_2x.png 2x, ../images/books/arrow1_3x.png 3x">
+            </div>
+
+            <figure class="fig_box fig_img2">
+                <img src="../images/books/content_img2x1.jpg" alt="많은 책들이 가득 채워진 책장" srcset="../images/books/content_img2x2.jpg 2x, ../images/books/content_img2x3.jpg 3x">
+                <figcaption class="blind-b">에드워드 호퍼의 그림 제목 239호 열차 C칸 </figcaption>
+            </figure>
+
+            <div class="sub_txtBox tBox5">
+                <h5>5</h5>
+                <span class="blind-b">다섯번째</span>
+                <p>293호 열차 C칸은 큐레이션 서가인만큼 다양한 분야의 한정된 책들로만 진열되어 있습니다. 이곳에 없는 책은 인근 위치한 노원문고(본점 및 5 매장)를 이용해 주시기 바랍니다.</p>
+            </div>
+        </article>
+    </div>
+
+    <!-- 하단메뉴바 -->
+    <article class="btm_quick mt_80">
+        <h3 class="blind-b">빠른 찾기 메뉴</h3>
+        <div class="txt_link">
+            <ul>
+                <li><a href="http://www.forest6.co.kr/home/board_bpJr09">문의사항</a></li>
+                <li><a href="http://www.forest6.co.kr/home/page_UmSb01">오시는 길</a></li>
+                <li><a href="">PC 버전</a></li>
+            </ul>
+        </div>
+    </article>
+
+    <footer id="footer">
+        <div class="ft_logo">
+            <a href=""><img src="../images/common/logo_gray1_1x.png" alt="더숲"
+                    srcset="../images/common/logo_gray1_2x.png 2x, ../images/common/logo_gray1_3x.png 3x"></a>
+            <a href="">개인정보처리방침</a>
+            <a href="">이용약관</a>
+        </div>
+        <div class="ft_info">
+            <span class="ft_bdr">대표이사 탁무권</span>
+            <span>TEXT. 010-3108-5472</span><br>
+            <span class="ft_bdr">TEL. 02-951-0206</span>
+            <span>E-MAIL. gm@forest6.co.kr</span>
+            <p>사업자등록번호 748-85-00389 <br>하나은행 247910011-85304 (주)더숲</p>
+            <address>
+                01751 서울시 노원구 노해로 480(상계동) 조광빌딩 지하 1층
+            </address>
+            <p>COPYRIGHT &copy; 2020 (주)더숲 ALL RIGHT RESERVED</p>
+        </div>
+    </footer>
+    </div>
+</body>
+
+</html>
