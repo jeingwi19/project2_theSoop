@@ -86,15 +86,14 @@ $(document).ready(function () {
     /* 얇은 배너 슬라이더 */
     $('.swiper-container.type1').each(function (idx) {
       var swiperName = 'type1Swiper'+idx;
+      console.log(swiperName);
       swiperName = new Swiper($(this), {
-        /* loop: true, */
+        loop: true,
         pagination: {
           el: '.swiper-pagination',
+          type: 'bullets',
+          clickable: true,
         },
-        /* navigation: {
-          nextEl: '.swiper-button-next',
-          prevEl: '.swiper-button-prev',
-        }, */
       });
     });
     

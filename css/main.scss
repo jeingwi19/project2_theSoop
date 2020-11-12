@@ -269,14 +269,14 @@ h3{display: inline-block;font-size: 20px;line-height: 28px;margin-bottom: 20px;}
         }
     }
     
-    /* style1 pagination bullet */
     
 
 /* 슬라이더1 */
-#swiperContainer {
-
-    .swiper-container.type1{height: 120px;}
+#swiperContainer{
     .swiper-pagination-fraction{
+        display: none;}
+    /* .swiper-container.type1{height: 120px;} */
+    /* .swiper-pagination-fraction{
         display: none;}
     .swiper-pagination {
         position: absolute;
@@ -285,89 +285,91 @@ h3{display: inline-block;font-size: 20px;line-height: 28px;margin-bottom: 20px;}
         }
     
     .swiper-pagination-bullet {
-    @include transition(all 0.3s ease-in-out);
-    width: 6px;
-    height: 2px;
-    display: inline-block;
-    border-radius: 0;
-    background: #191919;
-    opacity: 0.2;
+        @include transition(all 0.3s ease-in-out);
+        width: 6px;
+        height: 2px;
+        display: inline-block;
+        border-radius: 0;
+        background: #191919;
+        opacity: 0.2;
+        position: absolute;
+        z-index: 100;
     }
 
     .swiper-pagination-bullet-active {
-    opacity: 1;
-    /* background: var(--swiper-pagination-color, var(--swiper-theme-color)); */
-    background: #191919;
-    width: 32px;
+        opacity: 1;
+        background: #191919;
+        width: 32px;
     }
     .swiper-container-vertical > .swiper-pagination-bullets {
-    right: 10px;
-    top: 50%;
+        right: 10px;
+        top: 50%;
     }
     .swiper-container-vertical > .swiper-pagination-bullets .swiper-pagination-bullet {
-    margin: 6px 0;
-    display: block;
+        margin: 6px 0;
+        display: block;
     }
     .swiper-container-vertical > .swiper-pagination-bullets.swiper-pagination-bullets-dynamic {
-    top: 50%;
-    width: 8px;
-    }
+        top: 50%;
+        width: 8px;
+    } */
+
 }
 
-    #slide1 .swiper-slide{background: tan;}
-    #slide1 .swiper-slide:nth-child(1){
-        /* background: url("../images/common/banner_book1_bg1x.jpg") repeat-x; */
-        background: tan;
+
+
+   /* linebanner book1 */
+   #slide1 .swiper-slide{
+       position: relative;line-height: 120px;height: 120px;
+       @include bgsize(cover);
+       &::before{
+        content: "";position: absolute;width: 100%;height: 100%;right: 0;top: 0;
+        background: no-repeat center;
+      }
+   }
+    
+    #slide1 .line_slide1{
+        background: url("../images/common/banner_book1_bg1x.jpg") repeat-x;}
+
+    #slide1 .line_slide1::before{
+        background-image: url("../images/common/banner_book1_1x.jpg");
     }
-    #slide1 .swiper-slide:nth-child(1)::before{
-        content:"";position: absolute;left: 0;top: 0;width: 100%;height: 120px;background: url("../images/common/banner_book1_1x.jpg") no-repeat center;
+
+    #slide1 .line_slide2{background: url("../images/common/banner_book2_bg1x.jpg") repeat-x;}
+
+    #slide1 .line_slide2::before{
+        background-image: url("../images/common/banner_book2_1x.jpg");
     }
-    @media
+
+    #slide1 .line_slide3{background: url("../images/common/banner_book3_bg1x.jpg") repeat-x;}
+
+    #slide1 .line_slide3::before{
+        background-image: url("../images/common/banner_book3_1x.jpg");
+    }
+
+    /* @media
     screen and (-webkit-min-device-pixel-ratio: 2), 
     screen and (min-resolution: 192dpi),
     screen and (min-resolution: 2dppx) {
-    .main_visual::before{background-image: url("../images/common/banner_book1_2x.jpg");}
+        #slide1 {
+            .line_slide1{background-image: url("../images/common/banner_book1_bg2x.jpg");}
+            .line_slide1::before{background-image: url("../images/common/banner_book1_2x.jpg");}
+            .line_slide2{background-image: url("../images/common/banner_book2_bg2x.jpg");}
+            .line_slide2::before{background-image: url("../images/common/banner_book2_2x.jpg");}
+            .line_slide2{background-image: url("../images/common/banner_book3_bg2x.jpg");}
+            .line_slide3::before{background-image: url("../images/common/banner_book3_2x.jpg");}
+        }
     }
     @media
     screen and (-webkit-min-device-pixel-ratio: 3), 
     screen and (min-resolution: 288dpi),
     screen and (min-resolution: 3dppx) {
-    .main_visual::before{background-image: url("../images/common/banner_book1_3x.jpg");}
-    }
-
-    #slide1 .swiper-slide:nth-child(2){background: url("../images/common/banner_book2_bg1x.jpg") repeat-x;}
-
-    #slide1 .swiper-slide:nth-child(2)::before{
-        content:"";position: absolute;left: 0;top: 0;width: 100%;height: 120px;background: url("../images/common/banner_book2_1x.jpg") no-repeat center;
-    }
-    @media
-    screen and (-webkit-min-device-pixel-ratio: 2), 
-    screen and (min-resolution: 192dpi),
-    screen and (min-resolution: 2dppx) {
-    .main_visual::before{background-image: url("../images/common/banner_book2_2x.jpg");}
-    }
-    @media
-    screen and (-webkit-min-device-pixel-ratio: 3), 
-    screen and (min-resolution: 288dpi),
-    screen and (min-resolution: 3dppx) {
-    .main_visual::before{background-image: url("../images/common/banner_book2_3x.jpg");}
-    }
-
-    #slide1 .swiper-slide:nth-child(3){background: url("../images/common/banner_book3_bg1x.jpg") repeat-x;}
-
-    #slide1 .swiper-slide:nth-child(3)::before{
-        content:"";position: absolute;left: 0;top: 0;width: 100%;height: 120px;background: url("../images/common/banner_book3_1x.jpg") no-repeat center;
-    }
-    @media
-    screen and (-webkit-min-device-pixel-ratio: 2), 
-    screen and (min-resolution: 192dpi),
-    screen and (min-resolution: 2dppx) {
-    .main_visual::before{background-image: url("../images/common/banner_book3_2x.jpg");}
-    }
-    @media
-    screen and (-webkit-min-device-pixel-ratio: 3), 
-    screen and (min-resolution: 288dpi),
-    screen and (min-resolution: 3dppx) {
-    .main_visual::before{background-image: url("../images/common/banner_book3_3x.jpg");}
-    }
-
+        #slide1{
+            .line_slide1{background-image: url("../images/common/banner_book1_bg3x.jpg");}
+            .line_slide1::before{background-image: url("../images/common/banner_book1_3x.jpg");}
+            .line_slide2{background-image: url("../images/common/banner_book2_bg3x.jpg");}
+            .line_slide2::before{background-image: url("../images/common/banner_book2_3x.jpg");}
+            .line_slide2{background-image: url("../images/common/banner_book3_bg3x.jpg");}
+            .line_slide3::before{background-image: url("../images/common/banner_book3_3x.jpg");}
+        }
+    } */
