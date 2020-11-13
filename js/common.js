@@ -83,10 +83,9 @@ $(document).ready(function () {
     });
 
 
-    /* 얇은 배너 슬라이더 */
+    /* 띠배너 슬라이더 */
     $('.swiper-container.type1').each(function (idx) {
       var swiperName = 'type1Swiper'+idx;
-      console.log(swiperName);
       swiperName = new Swiper($(this), {
         loop: true,
         pagination: {

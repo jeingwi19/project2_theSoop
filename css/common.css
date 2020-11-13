@@ -315,34 +315,36 @@ body {
     width: 28px;
     height: 28px;
     background: url("../images/common/icon_location_1x.png"); }
-  #gnb .line_banner {
-    -webkit-background-size: cover;
-    background-size: cover;
-    position: relative;
-    background: no-repeat center;
-    margin-top: 20px; }
-    #gnb .line_banner img {
-      min-width: 100%; }
-    #gnb .line_banner .swiper-container {
+  #gnb #slideGnb {
+    margin-top: 20px;
+    /* .swiper-pagination-fraction{
+        display: none;}
+    .swiper-pagination-bullets{
+        display: visible;} */ }
+    #gnb #slideGnb .swiper-container.type1 {
       width: 100%;
       height: 120px; }
-    #gnb .line_banner .swiper-container.type1 {
-      height: 120px; }
-    #gnb .line_banner .swiper-pagination-fraction {
+      #gnb #slideGnb .swiper-container.type1 .swiper-slide {
+        background-repeat: repeat-x;
+        text-align: center; }
+        #gnb #slideGnb .swiper-container.type1 .swiper-slide.bnr_movie1 {
+          background-image: url("../images/common/banner_movie1_bg1x.jpg"); }
+        #gnb #slideGnb .swiper-container.type1 .swiper-slide.bnr_movie2 {
+          background-image: url("../images/common/banner_movie2_bg1x.jpg"); }
+        #gnb #slideGnb .swiper-container.type1 .swiper-slide.bnr_movie3 {
+          background-image: url("../images/common/banner_movie3_bg1x.jpg"); }
+      #gnb #slideGnb .swiper-container.type1 .swiper-slide img {
+        width: 360px; }
+      #gnb #slideGnb .swiper-container.type1 .swiper-pagination {
+        bottom: 102px;
+        left: 50%;
+        z-index: 500; }
+    #gnb #slideGnb .swiper-pagination {
+      background: red; }
+    #gnb #slideGnb .swiper-pagination-fraction {
       display: none; }
-    #gnb .line_banner .swiper-slide.banner1 {
-      background: url("../images/common/banner_movie1_3x.jpg"); }
-    #gnb .line_banner.banner2::before {
-      background: url("../images/common/banner_movie2_3x.jpg"); }
-    #gnb .line_banner.banner3::before {
-      background: url("../images/common/banner_movie3_3x.jpg"); }
-    #gnb .line_banner ::before {
-      content: "";
-      position: absolute;
-      width: 100%;
-      right: 0;
-      top: 0;
-      height: 100%; }
+    #gnb #slideGnb .swiper-pagination-bullets {
+      background: green; }
   #gnb .gnb_btnbtm {
     padding: 20px 20px;
     line-height: 28px;

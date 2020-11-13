@@ -170,30 +170,35 @@ body{font-family: NtSans;font-size: 14px;color: #191919;line-height: 22px;font-w
         li:first-child::after{content: "";position: absolute;left: 0;top: 16px;width: 28px;height: 28px;background: url("../images/common/icon_inquiry_1x.png");}
         li:last-child::after{content: "";position: absolute;left: 0;top: 16px;width: 28px;height: 28px;background: url("../images/common/icon_location_1x.png");}
     }
-    .line_banner{
-        @include bgsize(cover);
-        position: relative;background: no-repeat center;margin-top: 20px;
-        img{min-width: 100%;}
+    
 
-        .swiper-container{
-            
+    #slideGnb{
+        margin-top: 20px;
+        .swiper-container.type1{
             width: 100%;height: 120px;
-        }
-        .swiper-container.type1{height: 120px;}
-        //* * #slide1 .swiper-slider:first-child{}*/
-        .swiper-pagination-fraction{
-        display: none;}
-        
-        
-        .swiper-slide.banner1{background: url("../images/common/banner_movie1_3x.jpg");}
-        &.banner2::before{background: url("../images/common/banner_movie2_3x.jpg");}
-        &.banner3::before{background: url("../images/common/banner_movie3_3x.jpg");}
-
-        & ::before{
-            content: "";position: absolute;width: 100%;right: 0;top: 0;height: 100%;
+            .swiper-slide{
+                background-repeat: repeat-x;text-align: center;
+                &.bnr_movie1{background-image: url("../images/common/banner_movie1_bg1x.jpg");}
+                &.bnr_movie2{background-image: url("../images/common/banner_movie2_bg1x.jpg");}
+                &.bnr_movie3{background-image: url("../images/common/banner_movie3_bg1x.jpg");}
+            }
+            .swiper-slide img{width: 360px;}
+            .swiper-pagination{bottom: 102px;left: 50%;z-index: 500;}
+            
         }
 
+        .swiper-pagination{background: red;}
+        .swiper-pagination-fraction{display: none;}
+        .swiper-pagination-bullets{background: green;}
+
+        /* .swiper-pagination-fraction{
+            display: none;}
+        .swiper-pagination-bullets{
+            display: visible;} */
+        
     }
+
+    
 
     .gnb_btnbtm{
         padding: 20px 20px;line-height: 28px;vertical-align: middle;height: 28px;
