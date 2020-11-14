@@ -184,6 +184,10 @@
         li{float: left;margin-bottom: 60px;}
         li:first-child{margin-right: 16px;}
     }
+    .tit_warp .font16{
+        strong{display: inline-block;}
+        width: 140px;height: 44px;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;
+    }
 }
 
 /* 컨텐츠4 */
@@ -205,9 +209,10 @@
         @include radius(0 8px 8px 0);
         /* min-width: 100%; *//* margin-left: 16px; width: 180px;*/
         min-width: 210px;height: 110px;background: #f6f6f6;
-        strong, span{padding-left: 16px;}
+        strong, span{padding-left: 16px;display: inline-block;}
         .font16{
             width: 180px;height: 48px;
+            white-space: nowrap;overflow: hidden;text-overflow: ellipsis;
         }
         .font12{
             position: relative;
@@ -217,7 +222,6 @@
             }
         }
     }
-    
 }
 
 /* 컨텐츠5 */

@@ -247,6 +247,14 @@
     margin-bottom: 60px; }
   .cnt3 .list_read li:first-child {
     margin-right: 16px; }
+.cnt3 .tit_warp .font16 {
+  width: 140px;
+  height: 44px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis; }
+  .cnt3 .tit_warp .font16 strong {
+    display: inline-block; }
 
 /* 컨텐츠4 */
 .cnt4 a, .cnt4 strong, .cnt4 span {
@@ -270,10 +278,14 @@
   height: 110px;
   background: #f6f6f6; }
   .cnt4 .txt_event strong, .cnt4 .txt_event span {
-    padding-left: 16px; }
+    padding-left: 16px;
+    display: inline-block; }
   .cnt4 .txt_event .font16 {
     width: 180px;
-    height: 48px; }
+    height: 48px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; }
   .cnt4 .txt_event .font12 {
     position: relative; }
     .cnt4 .txt_event .font12 span:first-child::after {
