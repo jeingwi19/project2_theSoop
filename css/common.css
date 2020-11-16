@@ -1,4 +1,7 @@
 @charset "UTF-8";
+/* @mixin animate($value...) {
+    0% {opacity: ;}
+} */
 @font-face {
   font-family: NtSans;
   font-weight: 400;

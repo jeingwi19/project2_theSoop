@@ -56,8 +56,25 @@ screen and (min-resolution: 3dppx) {
 
 .arrow{
     position: absolute;
+    display: block;
+    margin: 1em auto;
 }
 
-.down1{
-    left: 240px;top: 540px;
+.down{
+    left: 240px;top: 520px;
+}
+
+
+.down .arrow_move {
+    animation: arrow 2s 1s infinite;
+    }
+@keyframes arrow{
+    0%{transform: translateY(0);}
+    100%{transform: translateY(150%)}
+}
+
+.side2{
+    position: absolute;
+    left: 20px;
+    top: 1100px;
 }

@@ -79,4 +79,23 @@ $(document).ready(function () {
         }
     });
 
+
+    /* subPage_books */
+    var scrollY = 0
+    var timer = 0;
+
+    $(window).on('scroll', function() {
+        clearTimeout(timer);
+
+        timer = setTimeout(function() {
+            scrollY = $(this).scrollTop();
+            //console.log(scrollY);
+
+            $('.fade').each(function () {
+                if(scrollY > $(this).offset().top- 300) $(this).stop().
+                animate({opacity: 1, top: 0});
+                else $(this).stop().animate({opacity: 0, top: 50});
+            });
+        }, 100);
+    })
 });

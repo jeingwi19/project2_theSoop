@@ -141,6 +141,7 @@
 }
 
 /* 컨텐츠2 */
+
 .cnt2{
     > h3{display: block;text-align: center;}
     .swiper-container{
@@ -176,6 +177,19 @@
     .swiper-wrapper {transform: translate3d(20px, 0, 0);}
     
 }
+
+/* .cnt2.cnt2_swiper{
+    margin: 0 -20px;
+    .swiper-slide{
+        @include transition(transform 0.5s);
+        width: 80%;color: #fff;
+
+        .swiper-slide-prev, .swiper-slide-next{
+            @include transform(scale(0.9));
+            opacity: 0.7;
+          }
+    }
+} */
 
 /* 컨텐츠3 */
 .cnt3{
@@ -223,6 +237,7 @@
         }
     }
 }
+
 
 /* 컨텐츠5 */
 .cnt5{
