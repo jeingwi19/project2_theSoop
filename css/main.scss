@@ -81,7 +81,7 @@
 
 /* 상단메뉴 */
 .quick_top{
-    height: 138px;overflow-y: auto;
+    height: 138px;overflow-y: auto;width: 100%;
     ul{width: 486px;height: 100%;text-align: center;}
     ul li{float: left;width: 60px;margin: 20px 0 20px 18px;}
     a, img, span{display: block;text-align: center;}
@@ -152,7 +152,10 @@
         /* width: 73%; */
         width: 240px;margin-right: 20px;
         /* position: relative; */
-        .img_box{max-width: 240px;}
+        .img_box{
+            max-width: 240px;
+            > a{display: blcok;}
+        }
         .txt_club{
             padding: 0 0 0 16px; position: absolute;color: #fff;bottom: 24px;max-width: 224px;
             strong, a, span{display: inline-block}
@@ -272,8 +275,8 @@
 
 /* 슬라이더1 */
 #swiperContainer{
-    .swiper-pagination-fraction{
-        display: none;}
+    /* .swiper-pagination-fraction{
+        display: none;} */
     /* .swiper-container.type1{height: 120px;} */
     /* .swiper-pagination-fraction{
         display: none;}
@@ -328,8 +331,13 @@
     }
     .swiper-slide img{width: 360px;}
 
-    .swiper-pagination{bottom: 102px;left: 50%;}
+    .swiper-pagination{
+        @include transform(translateX(-50%));
+        left: 50%;
+        bottom: 110px;
+    }
 } 
+
     
     /* 슬라이드 띠배너2 */
     #lineSlide2{
