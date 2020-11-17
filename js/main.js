@@ -25,25 +25,27 @@ $(document).ready(function () {
     });
     //본문1 자동 실행과 일시정지 추가
     //일시정지 클릭
-    $('.main_top .controller .autostop').on('click', function () {
+    $('#cntr .autostop').on('click', function () {
+        //alert();
         $(this).hide().siblings().show();
-        mySwiper1.autoplay.stop(); //https://swiperjs.com/api/#autoplay
+        swiperMainTop.autoplay.stop(); //https://swiperjs.com/api/#autoplay
         return false;
     });
     //자동실행 클릭
-    $('.main_top .controller .autoplay').on('click', function () {
+    $('#cntr .autoplay').on('click', function () {
         $(this).hide().siblings().show();
-        mySwiper1.autoplay.start();
+        swiperMainTop.autoplay.start();
         return false;
     });
 
-    $('.swiper-container.top_qmenu').each(function (idx) {
+    /* 상단메뉴 */
+    /* $('.swiper-container.top_qmenu').each(function (idx) {
         var swiperTopmenu = new Swiper($(this), {
             slidesPerView: 4,
             spaceBetween: 16,
             centeredSlides: true,
           });
-    });
+    }); */
     
     /* cnt1 */
     var swiperCnt1  = new Swiper('.swiper-container.cnt1_swiper', {

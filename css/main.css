@@ -104,12 +104,12 @@
   .top_visual .controller > .autoplay, .top_visual .controller > .autostop {
     width: 32px;
     height: 32px;
-    background: blueviolet;
+    /* background: blueviolet; */
     position: absolute;
     left: 240px;
     top: -4px; }
   .top_visual .controller > .autoplay {
-    background: url("../images/main/icon_pause_1x.png"); }
+    background: url("../images/main/icon_play_1x.png"); }
   .top_visual .controller > .autostop {
     background: url("../images/main/icon_pause_1x.png"); }
 
