@@ -72,9 +72,9 @@
     }
 
     .controller > .autoplay, .controller > .autostop{
-        width: 32px;height: 32px;/* background: blueviolet; */position: absolute;left: 240px;top: -4px;
+        width: 32px;height: 32px;background: blueviolet;position: absolute;left: 240px;top: -4px;
     }
-    .controller > .autoplay{background: url("../images/main/icon_play_1x.png");}
+    .controller > .autoplay{background: url("../images/main/icon_pause_1x.png");}
     .controller > .autostop{background: url("../images/main/icon_pause_1x.png");}
     
 }

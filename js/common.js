@@ -84,16 +84,15 @@ $(document).ready(function () {
 
 
     /* 띠배너 슬라이더 */
-    $('.swiper-container.type1').each(function (idx) {
-      var swiperName = 'type1Swiper'+idx;
-      swiperName = new Swiper($(this), {
-        loop: true,
-        pagination: {
+    var swiperMainTop = new Swiper('#gnbLineSlide', {
+      loop: true,
+      //페이지네이션
+      pagination: {
           el: '.swiper-pagination',
           type: 'bullets',
-          clickable: true,
-        },
-      });
-    });
+      },
+      observer: true,
+      observeParents: true,
+  });
     
   });

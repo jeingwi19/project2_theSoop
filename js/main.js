@@ -25,37 +25,32 @@ $(document).ready(function () {
     });
     //본문1 자동 실행과 일시정지 추가
     //일시정지 클릭
-    $('#cntr .autostop').on('click', function () {
-        //alert();
+    $('.main_top .controller .autostop').on('click', function () {
         $(this).hide().siblings().show();
-        swiperMainTop.autoplay.stop(); //https://swiperjs.com/api/#autoplay
+        mySwiper1.autoplay.stop(); //https://swiperjs.com/api/#autoplay
         return false;
     });
     //자동실행 클릭
-    $('#cntr .autoplay').on('click', function () {
+    $('.main_top .controller .autoplay').on('click', function () {
         $(this).hide().siblings().show();
-        swiperMainTop.autoplay.start();
+        mySwiper1.autoplay.start();
         return false;
     });
 
-    /* 상단메뉴 */
-    /* $('.swiper-container.top_qmenu').each(function (idx) {
+    $('.swiper-container.top_qmenu').each(function (idx) {
         var swiperTopmenu = new Swiper($(this), {
             slidesPerView: 4,
             spaceBetween: 16,
             centeredSlides: true,
           });
-    }); */
+    });
     
     /* cnt1 */
     var swiperCnt1  = new Swiper('.swiper-container.cnt1_swiper', {
         spaceBetween: 10, //각 슬라이더 사이 공간
         slidesPerView: 'auto', //한 화면에 보여질 슬라이더 개수 기본1
         centeredSlides: true, //슬라이더 가운데 중요 슬라이더 위치
-        scrollbar: {
-            el: '.swiper-scrollbar',
-            draggable: true,    //스크롤바를 직접 드래그해서 이동가능
-        },
+
         a11y: {
             //prevSlideMessage: '이전 슬라이드',
             //nextSlideMessage: '다음 슬라이드',
@@ -99,5 +94,17 @@ $(document).ready(function () {
                 else $(this).stop().animate({opacity: 0, top: 50});
             });
         }, 100);
-    })
+    });
+
+    $('.swiper-container.type1').each(function (idx) {
+        var swiperName = 'type1Swiper'+idx;
+        swiperName = new Swiper($(this), {
+          loop: true,
+          pagination: {
+            el: '.swiper-pagination',
+            type: 'bullets',
+            clickable: true,
+          },
+        });
+      });
 });
