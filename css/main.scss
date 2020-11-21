@@ -96,7 +96,7 @@
         margin: 0 -20px;
         .swiper-wrapper{
             .swiper-slide{
-                /* width: 70%; */width: 248px;position: relative;left: -32px;
+                /* width: 248px; position: relative;left: -32px; */
                 .img_box{
                     position: relative;
                     @include radius(8px);
@@ -138,6 +138,7 @@
     }
 
 
+    .swiper-pagination{background: transparent;}
 }
 
 /* 컨텐츠2 */

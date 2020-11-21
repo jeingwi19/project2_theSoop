@@ -174,18 +174,20 @@ body{font-family: NtSans;font-size: 14px;color: #191919;line-height: 22px;font-w
 
     #gnbLineSlide{
         margin-top: 20px;
-        .swiper-container.type1{
-            width: 100%;height: 120px;
-            .swiper-slide{
-                background-repeat: repeat-x;text-align: center;
-                &.bnr_movie1{background-image: url("../images/common/banner_movie1_bg1x.jpg");}
-                &.bnr_movie2{background-image: url("../images/common/banner_movie2_bg1x.jpg");}
-                &.bnr_movie3{background-image: url("../images/common/banner_movie3_bg1x.jpg");}
-            }
-            .swiper-slide img{width: 360px;}
-            /* .swiper-pagination{left: 50%;z-index: 500;} */
-            
+        .swiper-container{
+            width: 100%;height: 120px;            
         }
+
+        &::before{
+            content: "";position: absolute;width: 100%;height: 100%;right: 0;top: 0;
+            background: repeat-x center;
+        }
+
+        &.banner1{background-image: url("../images/common/banner_movie1_bg1x.jpg");}
+        &.banner2{background-image: url("../images/common/banner_movie2_bg1x.jpg");}
+        &.banner3{background-image: url("../images/common/banner_movie3_bg1x.jpg");}
+
+        .swiper-slide img{display: inline-block;text-align: center;width: 100%;}
 
         /* .swiper-pagination{background: red;}
         .swiper-pagination-fraction{display: none;}
@@ -233,7 +235,7 @@ body{font-family: NtSans;font-size: 14px;color: #191919;line-height: 22px;font-w
     }
 }
 
-#gnbLineSlide{
+#lineSlide2, #lineSlide1{
     .swiper-pagination-bullets{
         .swiper-pagination-bullet{
             transition: all 0.3s ease-in-out;
@@ -247,5 +249,25 @@ body{font-family: NtSans;font-size: 14px;color: #191919;line-height: 22px;font-w
         .swiper-pagination-bullet-active{
             background: #191919;
             width: 32px;}
+    }
+}
+
+#gnbLineSlide{
+    .swiper-pagination-bullets{
+        right: -70%;
+        .swiper-pagination-bullet{
+            transition: all 0.3s ease-in-out;
+            width: 6px;
+            height: 2px;
+            display: inline-block;
+            border-radius: 0;
+            background: #fff;
+            opacity: 1;
+        }
+        .swiper-pagination-bullet-active{
+            background: #fff;
+            width: 32px;
+            opacity: 1;
+        }
     }
 }
