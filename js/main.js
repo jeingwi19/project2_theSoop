@@ -47,7 +47,7 @@ $(document).ready(function () {
     
     /* cnt1 */
     var swiperCnt1  = new Swiper('.swiper-container.cnt1_swiper', {
-        spaceBetween: 10, //각 슬라이더 사이 공간
+        spaceBetween: 16, //각 슬라이더 사이 공간
         slidesPerView: 'auto', //한 화면에 보여질 슬라이더 개수 기본1
         centeredSlides: true, //슬라이더 가운데 중요 슬라이더 위치
 
