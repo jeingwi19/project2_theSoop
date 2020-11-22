@@ -35,3 +35,11 @@
 /* @mixin animate($value...) {
     0% {opacity: ;}
 } */
+
+@mixin shadow($value...){
+    -webkit-box-shadow: $value;
+    -moz-box-shadow: $value;
+    -o-box-shadow: $value;
+    -ms-box-shadow: $value;
+    box-shadow: $value;
+}

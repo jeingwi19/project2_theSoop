@@ -61,8 +61,8 @@ $(document).ready(function () {
 
     /* cnt2 */
     var swiperCnt2 = new Swiper('.swiper-container.cnt2_swiper', {
-        spaceBetween: 16, //각 슬라이더 사이 공간
-        slidesPerView: 'auto', //한 화면에 보여질 슬라이더 개수 기본1
+        spaceBetween: 24, //각 슬라이더 사이 공간
+        slidesPerView: '1.5', //한 화면에 보여질 슬라이더 개수 기본1
         centeredSlides: true, //슬라이더 가운데 중요 슬라이더 위치
         a11y: {
             //prevSlideMessage: '이전 슬라이드',
@@ -70,10 +70,10 @@ $(document).ready(function () {
             firstSlideMessage: '첫번째 슬라이드',
             lastSlideMessage: '마지막 슬라이드',
         },
-        pagination: {
+        /* pagination: {
             el: '.swiper-pagination',
             clickable: true,
-          },
+          }, */
     });
 
 

@@ -138,7 +138,7 @@
     }
 
 
-    .swiper-pagination{background: transparent;}
+    .swiper-pagination{display: none;}
 }
 
 /* 컨텐츠2 */
@@ -146,7 +146,8 @@
 .cnt2{
     > h3{display: block;text-align: center;}
     .swiper-container{
-        margin: 0 -20px;
+        margin: 0 -20px 0 -20px;
+        .swiper-wrapper{left: -00px;}
     }
     .swiper-slide{
         @include transition(transform 0.3s);
@@ -154,8 +155,8 @@
         width: 240px;margin-right: 20px;
         /* position: relative; */
         .img_box{
-            max-width: 240px;
-            > a{display: blcok;}
+            max-width: 240px;min-width: 240px;
+            > a{display: block;hegith: 100%;}
         }
         .txt_club{
             padding: 0 0 0 16px; position: absolute;color: #fff;bottom: 24px;max-width: 224px;
@@ -172,13 +173,19 @@
     }
     .swiper-slide-prev, .swiper-slide-next{
         @include transform(scale(0.9));
-        opacity: 0.7;
+        opacity: 1;
     }
     .swiper-slide-prev{transform-origin: right center;}
     .swiper-slide-next{transform-origin: left center;}
 
     .swiper-container-android .swiper-slide,
     .swiper-wrapper {transform: translate3d(20px, 0, 0);}
+
+    .swiper-pagination{display: none;}
+
+    /* .swiper-slide-active{
+        @include sahdow(5px, 5px, 5px, 5px rgba(0, 0, 0, -0.5))
+    } */
     
 }
 
